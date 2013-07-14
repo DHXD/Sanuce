@@ -11,7 +11,7 @@ namespace Sanuce
 {
     public partial class FormFloors : Form
     {
-<<<<<<< HEAD
+
         public MyCommands ParentCommands;
 
         public FormFloors(MyCommands myCommands)
@@ -24,11 +24,6 @@ namespace Sanuce
         private void button1_Click(object sender, EventArgs e)
         {
 
-=======
-        public FormFloors()
-        {
-            InitializeComponent();
->>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
         }
     }
 }
