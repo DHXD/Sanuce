@@ -37,17 +37,28 @@
             // 
             // button1
             // 
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(30, 24);
+=======
+            this.button1.Location = new System.Drawing.Point(157, 30);
+>>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(30, 59);
+=======
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(105, 120);
+>>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -56,7 +67,11 @@
             // 
             // button3
             // 
+<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(30, 105);
+=======
+            this.button3.Location = new System.Drawing.Point(113, 128);
+>>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -65,7 +80,11 @@
             // 
             // button4
             // 
+<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(170, 178);
+=======
+            this.button4.Location = new System.Drawing.Point(121, 136);
+>>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -75,7 +94,11 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+<<<<<<< HEAD
             this.listBox1.Location = new System.Drawing.Point(142, 24);
+=======
+            this.listBox1.Location = new System.Drawing.Point(31, 46);
+>>>>>>> 1222b877ccd269f0271a6cecdb5665d956186591
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 4;
