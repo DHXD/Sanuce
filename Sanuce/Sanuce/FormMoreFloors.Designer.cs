@@ -107,7 +107,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMoreFloors";
-            this.Text = "Nhập Tầng Cần Thêm";
+            this.Text = "Thêm Tầng";
             this.ResumeLayout(false);
             this.PerformLayout();
 

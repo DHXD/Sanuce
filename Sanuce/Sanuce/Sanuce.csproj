@@ -96,10 +96,12 @@
     <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
+      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.AutoCAD.Interop, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
+      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.dll</HintPath>
     </Reference>
     <Reference Include="acdbmgdbrep, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -157,6 +159,12 @@
     <Compile Include="myPlugin.cs" />
     <Compile Include="myCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xóa Tầng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xóa Tầng.Designer.cs">
+      <DependentUpon>Xóa Tầng.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormFloors.resx">
@@ -169,6 +177,9 @@
       <DependentUpon>myCommands.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>myCommands.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xóa Tầng.resx">
+      <DependentUpon>Xóa Tầng.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
