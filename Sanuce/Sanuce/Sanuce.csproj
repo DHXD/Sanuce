@@ -107,6 +107,8 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -122,6 +124,12 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFloors.Designer.cs">
+      <DependentUpon>FormFloors.cs</DependentUpon>
+    </Compile>
     <Compile Include="myCommands.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormFloors.resx">
+      <DependentUpon>FormFloors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myCommands.resx">
       <DependentUpon>myCommands.cs</DependentUpon>
       <Generator>ResXFileCodeGenerator</Generator>

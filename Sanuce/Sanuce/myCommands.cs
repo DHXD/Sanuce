@@ -29,6 +29,8 @@ namespace Sanuce
         // NOTE: CommandMethod has overloads where you can provide helpid and
         // context menu.
 
+
+
         // Modal Command with localized name
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
         public void MyCommand() // This method can have any name
