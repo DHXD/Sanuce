@@ -130,6 +130,12 @@
     <Compile Include="FormFloors.Designer.cs">
       <DependentUpon>FormFloors.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMoreFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMoreFloors.Designer.cs">
+      <DependentUpon>FormMoreFloors.cs</DependentUpon>
+    </Compile>
     <Compile Include="myCommands.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormFloors.resx">
       <DependentUpon>FormFloors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMoreFloors.resx">
+      <DependentUpon>FormMoreFloors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="myCommands.resx">
       <DependentUpon>myCommands.cs</DependentUpon>
