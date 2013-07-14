@@ -11,12 +11,20 @@ namespace Sanuce
 {
     public partial class Xóa_Tầng : Form
     {
-        public Xóa_Tầng()
+        public FormFloors ParentXoaTang;
+
+        public Xóa_Tầng(FormFloors formFloors)
         {
             InitializeComponent();
+            ParentXoaTang = formFloors;
         }
 
         private void Xóa_Tầng_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
