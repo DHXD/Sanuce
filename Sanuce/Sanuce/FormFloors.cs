@@ -38,6 +38,12 @@ namespace Sanuce
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sửa_Tâng suatang = new Sửa_Tâng(this);
+            suatang.ShowDialog();
+        }
     }
 
 }

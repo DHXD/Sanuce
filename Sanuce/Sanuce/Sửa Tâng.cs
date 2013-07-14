@@ -11,9 +11,13 @@ namespace Sanuce
 {
     public partial class Sửa_Tâng : Form
     {
-        public Sửa_Tâng()
+        public FormFloors ParentSuaTang;
+
+        public Sửa_Tâng(FormFloors formFloors)
         {
             InitializeComponent();
+
+            ParentSuaTang = formFloors;
         }
     }
 }
