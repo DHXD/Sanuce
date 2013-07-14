@@ -23,7 +23,20 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+        public FormFloors()
+        {
+            InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        {
 
         }
     }
+
 }
+
+
+
