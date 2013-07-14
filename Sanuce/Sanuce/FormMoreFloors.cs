@@ -11,9 +11,13 @@ namespace Sanuce
 {
     public partial class FormMoreFloors : Form
     {
-        public FormMoreFloors()
+        public FormFloors ParentFormFloors;
+
+        public FormMoreFloors(FormFloors formFloors)
         {
             InitializeComponent();
+
+            ParentFormFloors = formFloors;
         }
     }
 }

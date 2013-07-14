@@ -102,7 +102,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormMoreFloors";
-            this.Text = "FormMoreFloors";
+            this.Text = "Sửa Tầng";
             this.ResumeLayout(false);
             this.PerformLayout();
 

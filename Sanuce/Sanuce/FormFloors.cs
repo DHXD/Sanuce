@@ -23,10 +23,14 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FormMoreFloors MoreFloor = new FormMoreFloors(this);
+            MoreFloor.ShowDialog();
         }
+
         public FormFloors()
         {
             InitializeComponent();
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
