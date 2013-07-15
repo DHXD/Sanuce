@@ -29,5 +29,15 @@ namespace Sanuce
         {
             MessageBox.Show(string.Format("Sua tang {0} \n Chieu Cao {1}", textSua.Text,textNCao.Text)); 
         }
+
+        private void Sửa_Tâng_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

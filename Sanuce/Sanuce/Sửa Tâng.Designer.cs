@@ -43,6 +43,7 @@
             this.textSua.Name = "textSua";
             this.textSua.Size = new System.Drawing.Size(151, 20);
             this.textSua.TabIndex = 0;
+            this.textSua.TextChanged += new System.EventHandler(this.textSua_TextChanged);
             // 
             // buttonDongY
             // 
@@ -102,13 +103,13 @@
             this.Controls.Add(this.buttonDongY);
             this.Controls.Add(this.textSua);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Sửa_Tâng";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Sửa_Tâng";
+            this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
