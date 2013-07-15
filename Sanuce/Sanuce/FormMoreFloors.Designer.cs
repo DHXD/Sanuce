@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMoreFloors));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textThemTang = new System.Windows.Forms.TextBox();
-            this.textCao = new System.Windows.Forms.TextBox();
+            this.TxtThemTang = new System.Windows.Forms.TextBox();
+            this.TxtCao = new System.Windows.Forms.TextBox();
             this.buttonDongY = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,20 +57,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhập &Chiều cao:";
             // 
-            // textThemTang
+            // TxtThemTang
             // 
-            this.textThemTang.Location = new System.Drawing.Point(165, 21);
-            this.textThemTang.Name = "textThemTang";
-            this.textThemTang.Size = new System.Drawing.Size(154, 20);
-            this.textThemTang.TabIndex = 2;
-            this.textThemTang.TextChanged += new System.EventHandler(this.txtThemTang_TextChanged);
+            this.TxtThemTang.Location = new System.Drawing.Point(165, 21);
+            this.TxtThemTang.Name = "TxtThemTang";
+            this.TxtThemTang.Size = new System.Drawing.Size(154, 20);
+            this.TxtThemTang.TabIndex = 2;
+            this.TxtThemTang.TextChanged += new System.EventHandler(this.txtThemTang_TextChanged);
             // 
-            // textCao
+            // TxtCao
             // 
-            this.textCao.Location = new System.Drawing.Point(165, 60);
-            this.textCao.Name = "textCao";
-            this.textCao.Size = new System.Drawing.Size(154, 20);
-            this.textCao.TabIndex = 3;
+            this.TxtCao.Location = new System.Drawing.Point(165, 60);
+            this.TxtCao.Name = "TxtCao";
+            this.TxtCao.Size = new System.Drawing.Size(154, 20);
+            this.TxtCao.TabIndex = 3;
+            this.TxtCao.TextChanged += new System.EventHandler(this.textCao_TextChanged);
             // 
             // buttonDongY
             // 
@@ -83,16 +84,16 @@
             this.buttonDongY.UseVisualStyleBackColor = true;
             this.buttonDongY.Click += new System.EventHandler(this.buttonDongY_Click);
             // 
-            // button2
+            // buttonHuy
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(244, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "&Hủy";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHuy.Location = new System.Drawing.Point(244, 106);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuy.TabIndex = 5;
+            this.buttonHuy.Text = "&Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = true;
+            this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormMoreFloors
             // 
@@ -100,10 +101,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 147);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonDongY);
-            this.Controls.Add(this.textCao);
-            this.Controls.Add(this.textThemTang);
+            this.Controls.Add(this.TxtCao);
+            this.Controls.Add(this.TxtThemTang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -121,9 +122,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textThemTang;
-        private System.Windows.Forms.TextBox textCao;
+        private System.Windows.Forms.TextBox TxtCao;
         private System.Windows.Forms.Button buttonDongY;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.TextBox TxtThemTang;
     }
 }
