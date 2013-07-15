@@ -102,10 +102,12 @@
             this.Controls.Add(this.buttonDongY);
             this.Controls.Add(this.textSua);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Sửa_Tâng";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Sửa_Tâng";
             this.ResumeLayout(false);
             this.PerformLayout();
