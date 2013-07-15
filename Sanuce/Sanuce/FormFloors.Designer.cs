@@ -32,11 +32,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.hienthitang = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.hienthicotcaodo = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.hienthicotcaodo = new System.Windows.Forms.ListBox();
+            this.hienthitang = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,60 +70,57 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // hienthitang
-            // 
-            this.hienthitang.FormattingEnabled = true;
-            this.hienthitang.Location = new System.Drawing.Point(6, 40);
-            this.hienthitang.Name = "hienthitang";
-            this.hienthitang.Size = new System.Drawing.Size(95, 69);
-            this.hienthitang.TabIndex = 4;
-            this.hienthitang.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 525F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.hienthitang, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.hienthicotcaodo, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(136, 21);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(127, 21);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.08696F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.91304F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 115);
-            this.tableLayoutPanel1.TabIndex = 5;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // hienthicotcaodo
-            // 
-            this.hienthicotcaodo.FormattingEnabled = true;
-            this.hienthicotcaodo.Location = new System.Drawing.Point(111, 40);
-            this.hienthicotcaodo.Name = "hienthicotcaodo";
-            this.hienthicotcaodo.Size = new System.Drawing.Size(221, 69);
-            this.hienthicotcaodo.TabIndex = 8;
-            this.hienthicotcaodo.SelectedIndexChanged += new System.EventHandler(this.hienthicotcaodo_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "tang";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 10);
+            this.label2.Location = new System.Drawing.Point(78, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "cot cao do";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "tang";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // hienthicotcaodo
+            // 
+            this.hienthicotcaodo.FormattingEnabled = true;
+            this.hienthicotcaodo.Location = new System.Drawing.Point(78, 33);
+            this.hienthicotcaodo.Name = "hienthicotcaodo";
+            this.hienthicotcaodo.Size = new System.Drawing.Size(218, 69);
+            this.hienthicotcaodo.TabIndex = 8;
+            // 
+            // hienthitang
+            // 
+            this.hienthitang.FormattingEnabled = true;
+            this.hienthitang.Location = new System.Drawing.Point(3, 33);
+            this.hienthitang.Name = "hienthitang";
+            this.hienthitang.Size = new System.Drawing.Size(69, 69);
+            this.hienthitang.TabIndex = 4;
             // 
             // FormFloors
             // 
@@ -152,10 +149,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox hienthitang;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListBox hienthicotcaodo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox hienthitang;
+        private System.Windows.Forms.ListBox hienthicotcaodo;
     }
 }
