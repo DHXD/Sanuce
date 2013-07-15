@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMoreFloors));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textThemTang = new System.Windows.Forms.TextBox();
+            this.textCao = new System.Windows.Forms.TextBox();
+            this.buttonDongY = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -57,29 +57,31 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhập &Chiều cao:";
             // 
-            // textBox1
+            // textThemTang
             // 
-            this.textBox1.Location = new System.Drawing.Point(165, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 2;
+            this.textThemTang.Location = new System.Drawing.Point(165, 21);
+            this.textThemTang.Name = "textThemTang";
+            this.textThemTang.Size = new System.Drawing.Size(154, 20);
+            this.textThemTang.TabIndex = 2;
+            this.textThemTang.TextChanged += new System.EventHandler(this.txtThemTang_TextChanged);
             // 
-            // textBox2
+            // textCao
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 3;
+            this.textCao.Location = new System.Drawing.Point(165, 60);
+            this.textCao.Name = "textCao";
+            this.textCao.Size = new System.Drawing.Size(154, 20);
+            this.textCao.TabIndex = 3;
             // 
-            // button1
+            // buttonDongY
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(149, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "&Đồng ý";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDongY.Location = new System.Drawing.Point(149, 106);
+            this.buttonDongY.Name = "buttonDongY";
+            this.buttonDongY.Size = new System.Drawing.Size(75, 23);
+            this.buttonDongY.TabIndex = 4;
+            this.buttonDongY.Text = "&Đồng ý";
+            this.buttonDongY.UseVisualStyleBackColor = true;
+            this.buttonDongY.Click += new System.EventHandler(this.buttonDongY_Click);
             // 
             // button2
             // 
@@ -90,17 +92,18 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "&Hủy";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormMoreFloors
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 147);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonDongY);
+            this.Controls.Add(this.textCao);
+            this.Controls.Add(this.textThemTang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -118,9 +121,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textThemTang;
+        private System.Windows.Forms.TextBox textCao;
+        private System.Windows.Forms.Button buttonDongY;
         private System.Windows.Forms.Button button2;
     }
 }

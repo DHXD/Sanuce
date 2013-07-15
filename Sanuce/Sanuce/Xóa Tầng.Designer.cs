@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xóa_Tầng));
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDongY = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textXoa = new System.Windows.Forms.TextBox();
+            this.buttonHuy = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonDongY
             // 
-            this.button1.Location = new System.Drawing.Point(113, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "&Đồng ý";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDongY.Location = new System.Drawing.Point(113, 66);
+            this.buttonDongY.Name = "buttonDongY";
+            this.buttonDongY.Size = new System.Drawing.Size(75, 23);
+            this.buttonDongY.TabIndex = 0;
+            this.buttonDongY.Text = "&Đồng ý";
+            this.buttonDongY.UseVisualStyleBackColor = true;
+            this.buttonDongY.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -55,42 +56,45 @@
             this.label1.Text = "Nhập tầng cần &Xóa:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // textXoa
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 2;
+            this.textXoa.Location = new System.Drawing.Point(136, 19);
+            this.textXoa.Name = "textXoa";
+            this.textXoa.Size = new System.Drawing.Size(150, 20);
+            this.textXoa.TabIndex = 2;
+            this.textXoa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button2
+            // buttonHuy
             // 
-            this.button2.Location = new System.Drawing.Point(211, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "&Hủy";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonHuy.Location = new System.Drawing.Point(211, 66);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuy.TabIndex = 3;
+            this.buttonHuy.Text = "&Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = true;
+            this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // buttonXoa
             // 
-            this.button3.Location = new System.Drawing.Point(20, 66);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "&Xóa tất cả";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonXoa.Location = new System.Drawing.Point(20, 66);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoa.TabIndex = 4;
+            this.buttonXoa.Text = "&Xóa tất cả";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.button3_Click);
             // 
             // Xóa_Tầng
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 111);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonXoa);
+            this.Controls.Add(this.buttonHuy);
+            this.Controls.Add(this.textXoa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonDongY);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -105,10 +109,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDongY;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textXoa;
+        private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }

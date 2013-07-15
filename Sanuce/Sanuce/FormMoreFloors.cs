@@ -19,5 +19,21 @@ namespace Sanuce
 
             ParentFormFloors = formFloors;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonDongY_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("Them tang {0} \n Chieu Cao {1}", textThemTang.Text, textCao.Text)); 
+            
+        }
+
+        private void txtThemTang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

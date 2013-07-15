@@ -28,5 +28,25 @@ namespace Sanuce
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("Xoa tang {0} \n",textXoa.Text )); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("Xoa tat ca {0} \n", textXoa.Text));
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
