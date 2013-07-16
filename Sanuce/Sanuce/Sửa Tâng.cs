@@ -47,6 +47,16 @@ namespace Sanuce
            
         }
 
-   
+
+        private void Sửa_Tâng_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

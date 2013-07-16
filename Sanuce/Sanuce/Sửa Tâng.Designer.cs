@@ -44,6 +44,11 @@
             this.txtSua.Size = new System.Drawing.Size(151, 20);
             this.txtSua.TabIndex = 0;
             this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
+            this.txtSua.Location = new System.Drawing.Point(139, 22);
+            this.txtSua.Name = "textSua";
+            this.txtSua.Size = new System.Drawing.Size(151, 20);
+            this.txtSua.TabIndex = 0;
+            this.txtSua.TextChanged += new System.EventHandler(this.textSua_TextChanged);
             // 
             // buttonDongY
             // 
@@ -108,6 +113,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Sửa_Tâng";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Sửa_Tâng";
             this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);

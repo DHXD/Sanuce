@@ -36,7 +36,7 @@ namespace Sanuce
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
 
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,9 +56,40 @@ namespace Sanuce
             xoatang.ShowDialog();
         }
 
+
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tầng_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void hienthicotcaodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+
         }
     }
 
