@@ -48,7 +48,7 @@
             this.txtSua.Name = "textSua";
             this.txtSua.Size = new System.Drawing.Size(151, 20);
             this.txtSua.TabIndex = 0;
-            this.txtSua.TextChanged += new System.EventHandler(this.textSua_TextChanged);
+            this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
             // 
             // buttonDongY
             // 

@@ -61,6 +61,7 @@ namespace Sanuce
         {
             this.Close();
         }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -89,6 +90,10 @@ namespace Sanuce
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
 
         }
     }
