@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sửa_Tâng));
-            this.textSua = new System.Windows.Forms.TextBox();
+            this.txtSua = new System.Windows.Forms.TextBox();
             this.buttonDongY = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonHuy = new System.Windows.Forms.Button();
-            this.textNCao = new System.Windows.Forms.TextBox();
+            this.txtNCao = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textSua
+            // txtSua
             // 
-            this.textSua.Location = new System.Drawing.Point(139, 22);
-            this.textSua.Name = "textSua";
-            this.textSua.Size = new System.Drawing.Size(151, 20);
-            this.textSua.TabIndex = 0;
+            this.txtSua.Location = new System.Drawing.Point(139, 22);
+            this.txtSua.Name = "txtSua";
+            this.txtSua.Size = new System.Drawing.Size(151, 20);
+            this.txtSua.TabIndex = 0;
+            this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
             // 
             // buttonDongY
             // 
@@ -82,12 +83,13 @@
             this.buttonHuy.UseVisualStyleBackColor = true;
             this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textNCao
+            // txtNCao
             // 
-            this.textNCao.Location = new System.Drawing.Point(139, 61);
-            this.textNCao.Name = "textNCao";
-            this.textNCao.Size = new System.Drawing.Size(151, 20);
-            this.textNCao.TabIndex = 5;
+            this.txtNCao.Location = new System.Drawing.Point(139, 61);
+            this.txtNCao.Name = "txtNCao";
+            this.txtNCao.Size = new System.Drawing.Size(151, 20);
+            this.txtNCao.TabIndex = 5;
+            this.txtNCao.TextChanged += new System.EventHandler(this.textNCao_TextChanged);
             // 
             // Sửa_Tâng
             // 
@@ -95,18 +97,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(313, 140);
-            this.Controls.Add(this.textNCao);
+            this.Controls.Add(this.txtNCao);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDongY);
-            this.Controls.Add(this.textSua);
+            this.Controls.Add(this.txtSua);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Sửa_Tâng";
             this.Text = "Sửa_Tâng";
+            this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,11 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textSua;
+        private System.Windows.Forms.TextBox txtSua;
         private System.Windows.Forms.Button buttonDongY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonHuy;
-        private System.Windows.Forms.TextBox textNCao;
+        private System.Windows.Forms.TextBox txtNCao;
     }
 }

@@ -16,6 +16,7 @@ namespace Sanuce
         public Xóa_Tầng(FormFloors formFloors)
         {
             InitializeComponent();
+
             ParentXoaTang = formFloors;
         }
 

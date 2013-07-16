@@ -31,6 +31,7 @@ namespace Sanuce
         
         public float[] sotang;
         public float[] chieucao;
+        public int t;
         
 
         public void myCommands(float[] tang, float[] cao)

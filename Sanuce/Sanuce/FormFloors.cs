@@ -55,6 +55,11 @@ namespace Sanuce
             Xóa_Tầng xoatang = new Xóa_Tầng(this);
             xoatang.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

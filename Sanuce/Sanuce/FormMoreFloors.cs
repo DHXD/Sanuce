@@ -36,13 +36,12 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            int t;
+            int t = new int();
             float d;
             int.TryParse(TxtThemTang.Text, out t);
             float.TryParse(TxtCao.Text, out d);
 
-      
-            for (int i = 0; i < t; i++)
+            for (int i = 0; i < t; i++)         
             {
                 MyCommands  tang = new MyCommands();
                 listTang.Add(tang);
@@ -53,6 +52,7 @@ namespace Sanuce
             {
                 MyCommands tang = listTang[i];
                 ParentFormFloors.listBox1.Items.Add("Tầng thứ" + i + ",Chiều Cao là: " + tang.chieucao);
+                this.Close();
           
             }
         }
