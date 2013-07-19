@@ -104,6 +104,7 @@
             this.MinimizeBox = false;
             this.Name = "FormDeleteTang";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Xóa Tầng";
             this.Load += new System.EventHandler(this.Xóa_Tầng_Load);
             this.ResumeLayout(false);
