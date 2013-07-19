@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace Sanuce
 {
-    public partial class Xóa_Tầng : Form
+    public partial class FormDeleteTang : Form
     {
         public FormFloors ParentXoaTang;
 
-        public Xóa_Tầng(FormFloors formFloors)
+        public FormDeleteTang(FormFloors formFloors)
         {
             InitializeComponent();
 

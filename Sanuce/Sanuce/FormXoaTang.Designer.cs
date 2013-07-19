@@ -1,6 +1,6 @@
 ﻿namespace Sanuce
 {
-    partial class Xóa_Tầng
+    partial class FormDeleteTang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Xóa_Tầng));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDeleteTang));
             this.buttonDongY = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textXoa = new System.Windows.Forms.TextBox();
@@ -51,9 +51,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nhập tầng cần &Xóa:";
+            this.label1.Text = "Tầng cần &Xóa:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textXoa
@@ -66,6 +66,7 @@
             // 
             // buttonHuy
             // 
+            this.buttonHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonHuy.Location = new System.Drawing.Point(211, 66);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(75, 23);
@@ -84,12 +85,13 @@
             this.buttonXoa.UseVisualStyleBackColor = true;
             this.buttonXoa.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Xóa_Tầng
+            // FormDeleteTang
             // 
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.buttonHuy;
             this.ClientSize = new System.Drawing.Size(309, 111);
             this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonHuy);
@@ -100,7 +102,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Xóa_Tầng";
+            this.Name = "FormDeleteTang";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Xóa Tầng";
             this.Load += new System.EventHandler(this.Xóa_Tầng_Load);

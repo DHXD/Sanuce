@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Sanuce
 {
-    class ClassTang
+    public class ClassTang
     {
-        public int sotang;
-        public float chieucao;
+        public int soTang;
+        public float chieuCao;
 
         public ClassTang(int tang, float cao)
         {
-            sotang = tang;
-            chieucao = cao;
+            soTang = tang;
+            chieuCao = cao;
 
         }
 

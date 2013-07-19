@@ -1,6 +1,6 @@
 ﻿namespace Sanuce
 {
-    partial class Sửa_Tâng
+    partial class FormEditTang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sửa_Tâng));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditTang));
             this.txtSua = new System.Windows.Forms.TextBox();
             this.buttonDongY = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +41,10 @@
             // 
             this.txtSua.Location = new System.Drawing.Point(139, 22);
             this.txtSua.Name = "txtSua";
+            this.txtSua.ReadOnly = true;
             this.txtSua.Size = new System.Drawing.Size(151, 20);
             this.txtSua.TabIndex = 0;
+            this.txtSua.TabStop = false;
             this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
             // 
             // buttonDongY
@@ -60,9 +62,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(22, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nhập tầng cần &Sửa:";
+            this.label1.Text = "Tầng cần &Sửa:";
             // 
             // label2
             // 
@@ -75,6 +77,7 @@
             // 
             // buttonHuy
             // 
+            this.buttonHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonHuy.Location = new System.Drawing.Point(215, 100);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(75, 23);
@@ -88,15 +91,16 @@
             this.txtNCao.Location = new System.Drawing.Point(139, 61);
             this.txtNCao.Name = "txtNCao";
             this.txtNCao.Size = new System.Drawing.Size(151, 20);
-            this.txtNCao.TabIndex = 5;
+            this.txtNCao.TabIndex = 0;
             this.txtNCao.TextChanged += new System.EventHandler(this.textNCao_TextChanged);
             // 
-            // Sửa_Tâng
+            // FormEditTang
             // 
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.buttonHuy;
             this.ClientSize = new System.Drawing.Size(313, 140);
             this.Controls.Add(this.txtNCao);
             this.Controls.Add(this.buttonHuy);
@@ -108,10 +112,10 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Sửa_Tâng";
+            this.Name = "FormEditTang";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Sửa_Tâng";
+            this.Text = "Sửa Tầng";
             this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

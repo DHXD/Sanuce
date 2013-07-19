@@ -27,6 +27,8 @@ namespace Sanuce
         {
             FormMoreFloors MoreFloor = new FormMoreFloors(this);
             MoreFloor.ShowDialog();
+
+            CapNhatDanhSach();
         }
 
         public FormFloors()
@@ -36,26 +38,44 @@ namespace Sanuce
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-
         {
+            bool bItemSelected = (listBox1.SelectedIndices.Count > 0);
+            
+            btnEdit.Enabled = bItemSelected;
+            btnDelete.Enabled = bItemSelected;
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Sửa_Tâng suatang = new Sửa_Tâng(this);
+            FormEditTang suatang = new FormEditTang(this);
             suatang.ShowDialog();
+
+            CapNhatDanhSach();
         }
 
         private void FormFloors_Load(object sender, EventArgs e)
         {
-
+            CapNhatDanhSach();
         }
+
+        void CapNhatDanhSach() 
+        {
+            listBox1.Items.Clear();
+            for (int i = 0; i < ParentCommands.listTang.Count; i++)
+            {
+                ClassTang tang = ParentCommands.listTang[i];
+                listBox1.Items.Add("Tầng thứ: " + (i + 1) + ", Chiều Cao là: " + tang.chieuCao);
+            }
+        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Xóa_Tầng xoatang = new Xóa_Tầng(this);
+            FormDeleteTang xoatang = new FormDeleteTang(this);
             xoatang.ShowDialog();
+
+            CapNhatDanhSach();
         }
 
 

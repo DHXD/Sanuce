@@ -86,6 +86,7 @@
             // 
             // buttonHuy
             // 
+            this.buttonHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHuy.Location = new System.Drawing.Point(244, 106);
             this.buttonHuy.Name = "buttonHuy";
@@ -101,6 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.buttonHuy;
             this.ClientSize = new System.Drawing.Size(347, 147);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonDongY);

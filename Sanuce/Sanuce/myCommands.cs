@@ -1,6 +1,7 @@
 ﻿// (C) Copyright 2013 by  
 //
 using System;
+using System.Collections.Generic;
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
@@ -28,8 +29,9 @@ namespace Sanuce
         //
         // NOTE: CommandMethod has overloads where you can provide helpid and
         // context menu.
-        
-      
+
+        public List<ClassTang> listTang = new List<ClassTang>();
+
      
 
         // Modal Command with localized name

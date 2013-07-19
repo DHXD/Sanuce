@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace Sanuce
 {
-    public partial class Sửa_Tâng : Form
+    public partial class FormEditTang : Form
     {
-        List<ClassTang> listTang = new List<ClassTang>();
+        
 
         public FormFloors ParentSuaTang;
 
-        public Sửa_Tâng(FormFloors formFloors)
+        public FormEditTang(FormFloors formFloors)
         {
             InitializeComponent();
 
@@ -29,7 +29,12 @@ namespace Sanuce
 
         private void Sửa_Tâng_Load(object sender, EventArgs e)
         {
-
+            txtSua.Text = "";
+            for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
+            {
+                txtSua.Text += (i > 0 ? ", " : "") + (ParentSuaTang.listBox1.SelectedIndices[i] + 1);
+            }
+            
         }
 
         private void txtSua_TextChanged(object sender, EventArgs e)
@@ -50,15 +55,27 @@ namespace Sanuce
             float.TryParse(txtNCao.Text, out chieucaosua);
 
             
+            
+            //////ParentSuaTang.listBox1.Items.Clear();
 
-            ParentSuaTang.listBox1.Items.Clear();
+            //////int a = ParentSuaTang.listBox1.Items.Count;
+            //////for (int i = 0; i < a; i++)
+            //////{
+            //////    ClassTang tang = listTang[i];
+            //////    ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều cao: " + tang.chieuCao);
+                
 
-            for (int i = 0; i < 100; i++)
+            //////}
+
+
+            for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
             {
-               ClassTang tang = listTang[i];
-               ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ",Chiều cao: " + tang.chieucao); 
-               this.Close();
+                ClassTang tang = ParentSuaTang.ParentCommands.listTang[ParentSuaTang.listBox1.SelectedIndices[i]];
+                tang.chieuCao = chieucaosua;
+
             }
+
+            this.Close();
             
         }
     }
