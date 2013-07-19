@@ -29,17 +29,7 @@ namespace Sanuce
         // NOTE: CommandMethod has overloads where you can provide helpid and
         // context menu.
         
-        public float[] sotang;
-        public float[] chieucao;
-        public int t;
-        
-
-        public void myCommands(float[] tang, float[] cao)
-        {
-            sotang = tang;
-            chieucao = cao;
-
-        }
+      
      
 
         // Modal Command with localized name

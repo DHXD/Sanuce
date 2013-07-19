@@ -100,6 +100,7 @@
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(347, 147);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonDongY);
@@ -112,6 +113,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMoreFloors";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Thêm Tầng";
             this.ResumeLayout(false);
             this.PerformLayout();

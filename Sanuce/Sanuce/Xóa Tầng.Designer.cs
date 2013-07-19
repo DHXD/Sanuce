@@ -89,6 +89,7 @@
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(309, 111);
             this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonHuy);
@@ -100,6 +101,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Xóa_Tầng";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Xóa Tầng";
             this.Load += new System.EventHandler(this.Xóa_Tầng_Load);
             this.ResumeLayout(false);

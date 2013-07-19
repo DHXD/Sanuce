@@ -11,7 +11,7 @@ namespace Sanuce
 {
     public partial class Sửa_Tâng : Form
     {
-        List<MyCommands> listTang = new List<MyCommands>();
+        List<ClassTang> listTang = new List<ClassTang>();
 
         public FormFloors ParentSuaTang;
 
@@ -44,7 +44,22 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-           
+            int tangcansua;
+            float chieucaosua;
+            int.TryParse(txtSua.Text, out tangcansua);
+            float.TryParse(txtNCao.Text, out chieucaosua);
+
+            
+
+            ParentSuaTang.listBox1.Items.Clear();
+
+            for (int i = 0; i < 100; i++)
+            {
+               ClassTang tang = listTang[i];
+               ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ",Chiều cao: " + tang.chieucao); 
+               this.Close();
+            }
+            
         }
     }
 }

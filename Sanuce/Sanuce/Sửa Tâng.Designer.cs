@@ -44,11 +44,6 @@
             this.txtSua.Size = new System.Drawing.Size(151, 20);
             this.txtSua.TabIndex = 0;
             this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
-            this.txtSua.Location = new System.Drawing.Point(139, 22);
-            this.txtSua.Name = "textSua";
-            this.txtSua.Size = new System.Drawing.Size(151, 20);
-            this.txtSua.TabIndex = 0;
-            this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
             // 
             // buttonDongY
             // 
@@ -101,6 +96,7 @@
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(313, 140);
             this.Controls.Add(this.txtNCao);
             this.Controls.Add(this.buttonHuy);
@@ -114,6 +110,7 @@
             this.MinimizeBox = false;
             this.Name = "Sửa_Tâng";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Sửa_Tâng";
             this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);

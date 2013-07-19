@@ -11,7 +11,7 @@ namespace Sanuce
 {
     public partial class FormMoreFloors : Form
     {
-        List<MyCommands> listTang = new List<MyCommands>();
+        List<ClassTang> listTang = new List<ClassTang>();
 
         public FormFloors ParentFormFloors;
 
@@ -33,29 +33,30 @@ namespace Sanuce
 
         }
 
-
+        
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            int t = new int();
+            int t ;
             float d;
             int.TryParse(TxtThemTang.Text, out t);
             float.TryParse(TxtCao.Text, out d);
 
-            for (int i = 0; i < t; i++)         
-            {
-                MyCommands  tang = new MyCommands();
-                listTang.Add(tang);
-            }
-
-            
             for (int i = 0; i < t; i++)
             {
-                MyCommands tang = listTang[i];
-                ParentFormFloors.listBox1.Items.Add("Tầng thứ" + i + ",Chiều Cao là: " + tang.chieucao);
+                ClassTang tang = new ClassTang(t,d);
+                listTang.Add(tang);
+
+            }
+        
+            for (int i = 0; i < t; i++)
+            {
+                ClassTang tang = listTang[i];
+                ParentFormFloors.listBox1.Items.Add("Tầng thứ: " + i + ",Chiều Cao là: " + tang.chieucao);
                 this.Close();
-          
+
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -139,6 +139,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassTang.cs" />
     <Compile Include="FormFloors.cs">
       <SubType>Form</SubType>
     </Compile>
