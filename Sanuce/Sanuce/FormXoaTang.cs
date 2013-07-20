@@ -37,14 +37,10 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Format("Xoa tang {0} \n",textXoa.Text )); 
+            
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ParentXoaTang.listBox1.Items.Clear();
-            this.Close();
-        }
+       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
