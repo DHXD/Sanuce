@@ -32,38 +32,61 @@ namespace Sanuce
 
         }
 
-        
+
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            int t ;
+
+            int t, u, n;
             float d;
 
-            // kiem tra nhap...
-            //////if(...) {
-            //////    MessageBox(...);
-            //////    return;
-            //////}
 
-            int.TryParse(TxtThemTang.Text, out t);
-            float.TryParse(TxtCao.Text, out d);
+            // Kiem tra nhap ....
+            int.TryParse(TxtThemTang.Text, out  u);
+            int.TryParse(TxtCao.Text, out n);
 
-            // kiem tra gia tri...
-
-
-            for (int i = 0; i < t; i++)
+            if (u < 1)
             {
-                ClassTang tang = new ClassTang(t,d);
-                ParentFormFloors.ParentCommands.listTang.Add(tang);
+                DialogResult thongBao;
+                thongBao = MessageBox.Show("Chưa nhập Số tầng cần thêm ! ", "Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-        
-            ////for (int i = 0; i < t; i++)
-            ////{
-            ////    ClassTang tang = listTang[i];
-            ////    ParentFormFloors.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều Cao là: " + tang.chieuCao);
-            ////}
 
-            this.Close();
+            if (n < 1)
+            {
+                DialogResult thongBao;
+                thongBao = MessageBox.Show("Chưa nhập Chiều cao ! ", "Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+            if (n > 0 && u > 0)
+            {
+                // kiem tra nhap...
+                //////if(...) {
+                //////    MessageBox(...);
+                //////    return;
+                //////}
+
+                int.TryParse(TxtThemTang.Text, out t);
+                float.TryParse(TxtCao.Text, out d);
+
+                // kiem tra gia tri...
+
+
+                for (int i = 0; i < t; i++)
+                {
+                    ClassTang tang = new ClassTang(t, d);
+                    ParentFormFloors.ParentCommands.listTang.Add(tang);
+
+                }
+
+                ////for (int i = 0; i < t; i++)
+                ////{
+                ////    ClassTang tang = listTang[i];
+                ////    ParentFormFloors.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều Cao là: " + tang.chieuCao);
+                ////}
+
+                this.Close();
+            }
         }
 
 
