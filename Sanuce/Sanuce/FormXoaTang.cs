@@ -23,6 +23,11 @@ namespace Sanuce
         private void Xóa_Tầng_Load(object sender, EventArgs e)
         {
 
+            textXoa.Text = " ";
+            for (int i = 0; i < ParentXoaTang.listBox1.SelectedIndices.Count; i++)
+            {
+                textXoa.Text += (i > 0 ? ", " : "") + (ParentXoaTang.listBox1.SelectedIndices[i] + 1);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,7 +42,20 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(string.Format("Xoa tang {0} \n",textXoa.Text )); 
+            int tangcanxoa;
+            int.TryParse(textXoa.Text, out tangcanxoa);
+            for (int i = 1; i <= ParentXoaTang.listBox1.SelectedIndices.Count; i++)
+            {
+                if (tangcanxoa == ParentXoaTang.listBox1.SelectedIndices[i])
+                {
+                    ParentXoaTang.listBox1.SelectedIndices.Remove(ParentXoaTang.listBox1.SelectedIndices[i]);
+                  
+                }
+             
+
+            }
+
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

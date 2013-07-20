@@ -58,60 +58,60 @@
     <Reference Include="AcCoreMgd, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcCoreMgd.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcCoreMgd.dll</HintPath>
     </Reference>
     <Reference Include="AcDbMgd, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcDbMgd.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcDbMgd.dll</HintPath>
     </Reference>
     <Reference Include="AcMgd, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcMgd.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcMgd.dll</HintPath>
     </Reference>
     <Reference Include="AcMr">
-      <HintPath>C:\ObjectARX 2013\inc\AcMr.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcMr.dll</HintPath>
     </Reference>
     <Reference Include="AdWindows, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AdWindows.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AdWindows.dll</HintPath>
     </Reference>
     <Reference Include="AcWindows, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcWindows.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcWindows.dll</HintPath>
     </Reference>
     <Reference Include="AcTcMgd, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcTcMgd.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcTcMgd.dll</HintPath>
     </Reference>
     <Reference Include="AcDx, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcDx.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcDx.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc-win32\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.AutoCAD.Interop, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc-win32\Autodesk.AutoCAD.Interop.dll</HintPath>
     </Reference>
     <Reference Include="acdbmgdbrep, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\acdbmgdbrep.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\acdbmgdbrep.dll</HintPath>
     </Reference>
     <Reference Include="AcCui, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\ObjectARX 2013\inc\AcCui.dll</HintPath>
+      <HintPath>C:\laptrinhcad\inc\AcCui.dll</HintPath>
     </Reference>
     <!--ACA References Begin-->
     <!--ACA Refences End-->

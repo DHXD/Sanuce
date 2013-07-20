@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textXoa = new System.Windows.Forms.TextBox();
             this.buttonHuy = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonDongY
@@ -60,6 +59,7 @@
             // 
             this.textXoa.Location = new System.Drawing.Point(136, 19);
             this.textXoa.Name = "textXoa";
+            this.textXoa.ReadOnly = true;
             this.textXoa.Size = new System.Drawing.Size(150, 20);
             this.textXoa.TabIndex = 2;
             this.textXoa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -75,16 +75,6 @@
             this.buttonHuy.UseVisualStyleBackColor = true;
             this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
-            // buttonXoa
-            // 
-            this.buttonXoa.Location = new System.Drawing.Point(20, 66);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
-            this.buttonXoa.TabIndex = 4;
-            this.buttonXoa.Text = "&Xóa tất cả";
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.button3_Click);
-            // 
             // FormDeleteTang
             // 
             this.AcceptButton = this.buttonDongY;
@@ -93,7 +83,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.buttonHuy;
             this.ClientSize = new System.Drawing.Size(309, 111);
-            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.textXoa);
             this.Controls.Add(this.label1);
@@ -117,6 +106,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textXoa;
         private System.Windows.Forms.Button buttonHuy;
-        private System.Windows.Forms.Button buttonXoa;
     }
 }
