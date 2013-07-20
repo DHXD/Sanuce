@@ -116,6 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMoreFloors";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm Tầng";
             this.ResumeLayout(false);
             this.PerformLayout();

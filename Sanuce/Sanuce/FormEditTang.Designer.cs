@@ -115,6 +115,7 @@
             this.Name = "FormEditTang";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sửa Tầng";
             this.Load += new System.EventHandler(this.Sửa_Tâng_Load);
             this.ResumeLayout(false);
