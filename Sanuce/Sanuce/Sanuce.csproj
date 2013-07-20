@@ -96,12 +96,12 @@
     <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\laptrinhcad\inc-win32\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.AutoCAD.Interop, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-      <HintPath>C:\laptrinhcad\inc-win32\Autodesk.AutoCAD.Interop.dll</HintPath>
+      <HintPath>C:\ObjectARX 2013\inc-x64\Autodesk.AutoCAD.Interop.dll</HintPath>
     </Reference>
     <Reference Include="acdbmgdbrep, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
