@@ -42,7 +42,7 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             int tangcanxoa;
             int.TryParse(textXoa.Text, out tangcanxoa);
             for (int i = 1; i <= ParentXoaTang.listBox1.SelectedIndices.Count; i++)
@@ -57,9 +57,7 @@ namespace Sanuce
             }
 
             this.Close();
-=======
-            
->>>>>>> c8884591c93b17ff5e12a9f93ae793d0ca5e853c
+
         }
 
        
