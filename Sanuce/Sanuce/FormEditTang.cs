@@ -22,10 +22,7 @@ namespace Sanuce
             ParentSuaTang = formFloors;
         }
 
-        private void textNCao_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void Sửa_Tâng_Load(object sender, EventArgs e)
         {
@@ -42,6 +39,17 @@ namespace Sanuce
 
         }
 
+        private void textNCao_TextChanged(object sender, EventArgs e)
+        {
+            ////bool bItemSelected = false;
+            ////if (txtNCao.SelectionLength > 0)
+            ////{
+            ////    bItemSelected = true;
+            ////}
+
+            ////txtNCao.Enabled = bItemSelected;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,6 +57,9 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
+            
+
+
             int tangcansua;
             float chieucaosua;
             int.TryParse(txtSua.Text, out tangcansua);
