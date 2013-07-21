@@ -57,37 +57,50 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
+            int t,u ;
+            float d;
+
+
+            // Kiem tra nhap ....
+            int.TryParse(txtNCao.Text, out  u);
             
-
-
-            int tangcansua;
-            float chieucaosua;
-            int.TryParse(txtSua.Text, out tangcansua);
-            float.TryParse(txtNCao.Text, out chieucaosua);
-
-            
-            
-            //////ParentSuaTang.listBox1.Items.Clear();
-
-            //////int a = ParentSuaTang.listBox1.Items.Count;
-            //////for (int i = 0; i < a; i++)
-            //////{
-            //////    ClassTang tang = listTang[i];
-            //////    ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều cao: " + tang.chieuCao);
-                
-
-            //////}
-
-
-            for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
+            if(u < 1 ) 
             {
-                ClassTang tang = ParentSuaTang.ParentCommands.listTang[ParentSuaTang.listBox1.SelectedIndices[i]];
-                tang.chieuCao = chieucaosua;
-
+                DialogResult thongBao;
+                thongBao = MessageBox.Show("Chưa nhập Số tầng cần thêm ! ","Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            this.Close();
-            
+
+            if (u > 0)
+            {
+                int tangcansua;
+                float chieucaosua;
+                int.TryParse(txtSua.Text, out tangcansua);
+                float.TryParse(txtNCao.Text, out chieucaosua);
+
+
+
+                //////ParentSuaTang.listBox1.Items.Clear();
+
+                //////int a = ParentSuaTang.listBox1.Items.Count;
+                //////for (int i = 0; i < a; i++)
+                //////{
+                //////    ClassTang tang = listTang[i];
+                //////    ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều cao: " + tang.chieuCao);
+
+
+                //////}
+
+
+                for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
+                {
+                    ClassTang tang = ParentSuaTang.ParentCommands.listTang[ParentSuaTang.listBox1.SelectedIndices[i]];
+                    tang.chieuCao = chieucaosua;
+
+                }
+
+                this.Close();
+            }
         }
     }
 }

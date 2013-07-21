@@ -43,17 +43,17 @@ namespace Sanuce
         private void button1_Click(object sender, EventArgs e)
         {
 
-            ////int TangCanXoa;
-            ////int.TryParse(textXoa.Text, out TangCanXoa);
+            int TangCanXoa;
+            int.TryParse(textXoa.Text, out TangCanXoa);
 
-            ////for (int i = 1; i <= ParentXoaTang.listBox1.SelectedIndices.Count; i++)
-            ////{
-            ////    ClassTang tang = ParentXoaTang.ParentCommands.listTang[ParentXoaTang.listBox1.SelectedIndices[i]];
-            ////    tang.chieuCao = 0;
-                
-            ////}
+            for (int i = 1; i <= ParentXoaTang.listBox1.SelectedIndices.Count; i++)
+            {
+                ClassTang tang = ParentXoaTang.ParentCommands.listTang[ParentXoaTang.listBox1.SelectedIndices[i]];
+                tang.chieuCao = 0;
 
-            ////this.Close();
+            }
+
+            this.Close();
 
         }
 
