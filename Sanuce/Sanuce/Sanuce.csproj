@@ -166,12 +166,6 @@
     <Compile Include="FormEditTang.Designer.cs">
       <DependentUpon>FormEditTang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormXoaTang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXoaTang.Designer.cs">
-      <DependentUpon>FormXoaTang.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormFloors.resx">
@@ -187,9 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditTang.resx">
       <DependentUpon>FormEditTang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormXoaTang.resx">
-      <DependentUpon>FormXoaTang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

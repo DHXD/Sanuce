@@ -57,12 +57,12 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            int t,u ;
-            float d;
+            int t ;
+            float d,u;
 
 
             // Kiem tra nhap ....
-            int.TryParse(txtNCao.Text, out  u);
+            float.TryParse(txtNCao.Text, out  u);
             
             if(u < 1 ) 
             {
@@ -75,6 +75,7 @@ namespace Sanuce
             {
                 int tangcansua;
                 float chieucaosua;
+                
                 int.TryParse(txtSua.Text, out tangcansua);
                 float.TryParse(txtNCao.Text, out chieucaosua);
 
