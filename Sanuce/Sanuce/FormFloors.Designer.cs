@@ -69,7 +69,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "&Xóa Tầng";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.button3_Click);
+            this.btnDelete.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // listBox1
             // 
