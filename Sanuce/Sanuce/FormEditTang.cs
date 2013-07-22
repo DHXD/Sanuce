@@ -57,8 +57,8 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            int t ;
-            float d,u;
+            
+            float u;
 
 
             // Kiem tra nhap ....

@@ -72,7 +72,21 @@ namespace Sanuce
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            // xac nhan
+            //if (MessageBo(angry)...) != MessageBoxButtons.OK) return;
+            DialogResult traloi;
+            traloi = MessageBox.Show("Bạn có chắc chắn không !", "Thông báo !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+            {
+
+                for (int i = 0; i < listBox1.SelectedIndices.Count; i++)
+                {
+                    int j = listBox1.SelectedIndices[i];
+
+                    ParentCommands.listTang.RemoveAt(j - i);
+                }
+            }
+
 
             CapNhatDanhSach();
         }

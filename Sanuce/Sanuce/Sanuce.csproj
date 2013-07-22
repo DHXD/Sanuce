@@ -71,7 +71,7 @@
       <HintPath>C:\ObjectARX 2013\inc\AcMgd.dll</HintPath>
     </Reference>
     <Reference Include="AcMr">
-      <HintPath>C:\laptrinhcad\inc\AcMr.dll</HintPath>
+      <HintPath>C:\ObjectARX 2013\inc\AcMr.dll</HintPath>
     </Reference>
     <Reference Include="AdWindows, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
