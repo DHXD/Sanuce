@@ -13,6 +13,7 @@ using Autodesk.AutoCAD.EditorInput;
 
 namespace Sanuce
 {
+    
 
     // This class is instantiated by AutoCAD for each document when
     // a command is called by the user the first time in the context
@@ -20,6 +21,7 @@ namespace Sanuce
     // is implicitly per-document!
     public class MyCommands
     {
+        
         // The CommandMethod attribute can be applied to any public  member 
         // function of any public class.
         // The function should take no arguments and return nothing.
@@ -36,6 +38,7 @@ namespace Sanuce
 
         // Modal Command with localized name
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
+        [CommandMethod("XDTANG")]
         public void MyCommand() // This method can have any name
         {
             // Put your command code here
