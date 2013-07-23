@@ -166,6 +166,12 @@
     <Compile Include="FormEditTang.Designer.cs">
       <DependentUpon>FormEditTang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormFloors.resx">
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditTang.resx">
       <DependentUpon>FormEditTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

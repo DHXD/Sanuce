@@ -41,13 +41,7 @@ namespace Sanuce
 
         private void textNCao_TextChanged(object sender, EventArgs e)
         {
-            ////bool bItemSelected = false;
-            ////if (txtNCao.SelectionLength > 0)
-            ////{
-            ////    bItemSelected = true;
-            ////}
-
-            ////txtNCao.Enabled = bItemSelected;
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,19 +72,6 @@ namespace Sanuce
                 
                 int.TryParse(txtSua.Text, out tangcansua);
                 float.TryParse(txtNCao.Text, out chieucaosua);
-
-
-
-                //////ParentSuaTang.listBox1.Items.Clear();
-
-                //////int a = ParentSuaTang.listBox1.Items.Count;
-                //////for (int i = 0; i < a; i++)
-                //////{
-                //////    ClassTang tang = listTang[i];
-                //////    ParentSuaTang.listBox1.Items.Add("Tầng thứ: " + i + ", Chiều cao: " + tang.chieuCao);
-
-
-                //////}
 
 
                 for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)

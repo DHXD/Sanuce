@@ -1,6 +1,7 @@
 ﻿// (C) Copyright 2013 by  
 //
 using System;
+using System.Runtime;
 using System.Collections.Generic;
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
@@ -13,7 +14,7 @@ using Autodesk.AutoCAD.EditorInput;
 
 namespace Sanuce
 {
-    
+
 
     // This class is instantiated by AutoCAD for each document when
     // a command is called by the user the first time in the context
@@ -21,7 +22,7 @@ namespace Sanuce
     // is implicitly per-document!
     public class MyCommands
     {
-        
+
         // The CommandMethod attribute can be applied to any public  member 
         // function of any public class.
         // The function should take no arguments and return nothing.
@@ -34,7 +35,7 @@ namespace Sanuce
 
         public List<ClassTang> listTang = new List<ClassTang>();
 
-     
+
 
         // Modal Command with localized name
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
@@ -42,13 +43,16 @@ namespace Sanuce
         public void MyCommand() // This method can have any name
         {
             // Put your command code here
-            FormFloors Floors = new FormFloors(this);
-            Floors.ShowDialog();
-
-    
+            Autodesk.AutoCAD.Windows.PaletteSet ps = null;
+            ps = new Autodesk.AutoCAD.Windows.PaletteSet("Sanuce");
+            Palette myPalette = new Palette(this);
+            ps.Add("Sanuce", myPalette);
+            ps.Visible = true;
+        
         }
 
-  
+
+
 
         // Modal Command with pickfirst selection
         [CommandMethod("MyGroup", "MyPickFirst", "MyPickFirstLocal", CommandFlags.Modal | CommandFlags.UsePickSet)]
@@ -87,5 +91,6 @@ namespace Sanuce
         }
 
     }
-
 }
+
+
