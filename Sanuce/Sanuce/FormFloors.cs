@@ -25,7 +25,7 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormMoreFloors MoreFloor = new FormMoreFloors(this);
+            FormAddFloors MoreFloor = new FormAddFloors(this);
             MoreFloor.ShowDialog();
 
             CapNhatDanhSach();
@@ -62,9 +62,9 @@ namespace Sanuce
         void CapNhatDanhSach() 
         {
             listBox1.Items.Clear();
-            for (int i = 0; i < ParentCommands.listTang.Count; i++)
+            for (int i = 0; i < ParentCommands.DuLieu.listTang.Count; i++)
             {
-                ClassTang tang = ParentCommands.listTang[i];
+                ClassTang tang = ParentCommands.DuLieu.listTang[i];
                 listBox1.Items.Add("Tầng thứ: " + (i + 1) + ", Chiều Cao là: " + tang.chieuCao);
             }
         }
@@ -73,7 +73,7 @@ namespace Sanuce
         private void btnXoa_Click(object sender, EventArgs e)
         {
             // xac nhan
-            //if (MessageBo(angry)...) != MessageBoxButtons.OK) return;
+            
             DialogResult traloi;
             traloi = MessageBox.Show("Bạn có chắc chắn không !", "Thông báo !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (traloi == DialogResult.OK)
@@ -83,7 +83,7 @@ namespace Sanuce
                 {
                     int j = listBox1.SelectedIndices[i];
 
-                    ParentCommands.listTang.RemoveAt(j - i);
+                    ParentCommands.DuLieu.listTang.RemoveAt(j - i);
                 }
             }
 

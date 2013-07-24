@@ -12,7 +12,6 @@ namespace Sanuce
     public partial class FormEditTang : Form
     {
         
-
         public FormFloors ParentSuaTang;
 
         public FormEditTang(FormFloors formFloors)
@@ -62,27 +61,26 @@ namespace Sanuce
             {
                 DialogResult thongBao;
                 thongBao = MessageBox.Show("Chưa nhập Số tầng cần thêm ! ","Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
 
-            if (u > 0)
+            int tangcansua;
+            float chieucaosua;
+
+            int.TryParse(txtSua.Text, out tangcansua);
+            float.TryParse(txtNCao.Text, out chieucaosua);
+
+
+            for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
             {
-                int tangcansua;
-                float chieucaosua;
-                
-                int.TryParse(txtSua.Text, out tangcansua);
-                float.TryParse(txtNCao.Text, out chieucaosua);
+                ClassTang tang = ParentSuaTang.ParentCommands.DuLieu.listTang[ParentSuaTang.listBox1.SelectedIndices[i]];
+                tang.chieuCao = chieucaosua;
 
-
-                for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
-                {
-                    ClassTang tang = ParentSuaTang.ParentCommands.listTang[ParentSuaTang.listBox1.SelectedIndices[i]];
-                    tang.chieuCao = chieucaosua;
-
-                }
-
-                this.Close();
             }
+
+            this.Close();
+            
         }
     }
 }

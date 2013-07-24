@@ -33,7 +33,7 @@
             // 
             // btnTang
             // 
-            this.btnTang.Location = new System.Drawing.Point(43, 25);
+            this.btnTang.Location = new System.Drawing.Point(27, 25);
             this.btnTang.Name = "btnTang";
             this.btnTang.Size = new System.Drawing.Size(75, 23);
             this.btnTang.TabIndex = 0;
@@ -48,7 +48,7 @@
             this.Controls.Add(this.btnTang);
             this.MinimumSize = new System.Drawing.Size(130, 200);
             this.Name = "Palette";
-            this.Size = new System.Drawing.Size(150, 220);
+            this.Size = new System.Drawing.Size(130, 200);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
 

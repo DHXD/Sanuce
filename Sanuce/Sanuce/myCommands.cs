@@ -15,7 +15,6 @@ using Autodesk.AutoCAD.EditorInput;
 namespace Sanuce
 {
 
-
     // This class is instantiated by AutoCAD for each document when
     // a command is called by the user the first time in the context
     // of a given document. In other words, non static data in this class
@@ -33,13 +32,15 @@ namespace Sanuce
         // NOTE: CommandMethod has overloads where you can provide helpid and
         // context menu.
 
-        public List<ClassTang> listTang = new List<ClassTang>();
+        public ClassDuLieu DuLieu = new ClassDuLieu();
 
-
+        
 
         // Modal Command with localized name
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
+        
         [CommandMethod("XDTANG")]
+        
         public void MyCommand() // This method can have any name
         {
             // Put your command code here
@@ -50,8 +51,6 @@ namespace Sanuce
             ps.Visible = true;
         
         }
-
-
 
 
         // Modal Command with pickfirst selection
