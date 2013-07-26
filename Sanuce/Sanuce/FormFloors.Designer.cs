@@ -116,7 +116,6 @@
             this.MinimumSize = new System.Drawing.Size(420, 250);
             this.Name = "FormFloors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormFloors";
             this.Load += new System.EventHandler(this.FormFloors_Load);
             this.ResumeLayout(false);
 
