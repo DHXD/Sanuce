@@ -65,7 +65,7 @@ namespace Sanuce
             for (int i = 0; i < ParentCommands.DuLieu.listTang.Count; i++)
             {
                 ClassTang tang = ParentCommands.DuLieu.listTang[i];
-                listBox1.Items.Add("Tầng thứ: " + (i + 1) + ", Chiều Cao là: " + tang.chieuCao);
+                listBox1.Items.Add("Tầng thứ: " + (i + 1) + ", Chiều Cao là: " + tang.chieuCao + " (mm)");
             }
         }
 

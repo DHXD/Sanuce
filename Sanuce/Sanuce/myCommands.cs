@@ -39,7 +39,7 @@ namespace Sanuce
         // Modal Command with localized name
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
         
-        [CommandMethod("XDTANG")]
+        [CommandMethod("XD")]
         
         public void MyCommand() // This method can have any name
         {
