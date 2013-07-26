@@ -45,7 +45,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập tầng cần &Thêm:";
+            this.label1.Text = "Nhập tầng cần Thêm:";
             // 
             // label2
             // 
@@ -55,7 +55,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nhập &Chiều cao:";
+            this.label2.Text = "Nhập Chiều cao:";
             // 
             // TxtThemTang
             // 
@@ -96,7 +96,7 @@
             this.buttonHuy.UseVisualStyleBackColor = true;
             this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
-            // FormMoreFloors
+            // FormAddFloors
             // 
             this.AcceptButton = this.buttonDongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,7 +114,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormMoreFloors";
+            this.Name = "FormAddFloors";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm Tầng";

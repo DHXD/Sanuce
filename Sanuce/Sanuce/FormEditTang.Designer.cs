@@ -64,7 +64,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Tầng cần &Sửa:";
+            this.label1.Text = "Tầng cần Sửa:";
             // 
             // label2
             // 
@@ -73,7 +73,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nhập &Chiều cao:";
+            this.label2.Text = "Nhập Chiều cao:";
             // 
             // buttonHuy
             // 
