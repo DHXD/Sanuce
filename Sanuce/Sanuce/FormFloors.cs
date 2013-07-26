@@ -87,8 +87,9 @@ namespace Sanuce
                 }
             }
 
-
             CapNhatDanhSach();
+
+            ParentCommands.DuLieu.Call_DuLieuChange("Delete");
         }
 
 

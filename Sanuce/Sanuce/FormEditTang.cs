@@ -80,7 +80,7 @@ namespace Sanuce
 
             }
 
-            
+            ParentSuaTang.ParentCommands.DuLieu.Call_DuLieuChange("Edit");
             
             this.Close();
             
