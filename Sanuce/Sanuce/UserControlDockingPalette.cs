@@ -25,14 +25,14 @@ namespace Sanuce
        
         private void UserControlDockingPalette_Load(object sender, EventArgs e)
         {
-            ParentCommands.DuLieu.DuLieuChangeEvent += new ClassDuLieu.DuLieu_EventHandler(DuLieu_Change);
-
+            ParentCommands.DuLieu.DuLieuChangeEvent += new ClassDuLieu.DuLieu_EventHandler(DuLieu_Change);   
         }
 
         // ham bat su kien DuLieuChangeEvent cua ClassDuLieu
         void DuLieu_Change(ClassDuLieu o, ClassDuLieu.DuLieu_EventArgs thamso)  
         {
             MessageBox.Show("Docking palette biet rang du lieu vua thay doi: " + thamso.ChangeType);
+            CapNhatDanhSach();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +42,22 @@ namespace Sanuce
             Floors.ShowDialog();
             
            
+        }
+
+        void CapNhatDanhSach()
+        {
+            listBoxTang.Items.Clear();
+            for (int i = 0; i < ParentCommands.DuLieu.listTang.Count; i++)
+            {
+                ClassTang tang = ParentCommands.DuLieu.listTang[i];
+                listBoxTang.Items.Add("Tầng thứ: " + (i + 1) + ", Chiều Cao là: " + tang.chieuCao + " (mm)");
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
         }
 
     }

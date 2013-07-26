@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnTang = new System.Windows.Forms.Button();
+            this.listBoxTang = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnTang
@@ -41,14 +42,24 @@
             this.btnTang.UseVisualStyleBackColor = true;
             this.btnTang.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBoxTang
+            // 
+            this.listBoxTang.FormattingEnabled = true;
+            this.listBoxTang.Location = new System.Drawing.Point(68, 54);
+            this.listBoxTang.Name = "listBoxTang";
+            this.listBoxTang.Size = new System.Drawing.Size(180, 147);
+            this.listBoxTang.TabIndex = 1;
+            this.listBoxTang.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // Palette
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listBoxTang);
             this.Controls.Add(this.btnTang);
             this.MinimumSize = new System.Drawing.Size(130, 200);
             this.Name = "Palette";
-            this.Size = new System.Drawing.Size(130, 200);
+            this.Size = new System.Drawing.Size(251, 358);
             this.Load += new System.EventHandler(this.UserControlDockingPalette_Load);
             this.ResumeLayout(false);
 
@@ -57,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnTang;
+        private System.Windows.Forms.ListBox listBoxTang;
 
     }
 }

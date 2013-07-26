@@ -49,7 +49,7 @@ namespace Sanuce
             Palette myPalette = new Palette(this);
             ps.Add("Sanuce", myPalette);
             ps.Visible = true;
-        
+            
         }
 
 
