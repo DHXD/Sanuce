@@ -35,6 +35,7 @@
             this.TxtCao = new System.Windows.Forms.TextBox();
             this.buttonDongY = new System.Windows.Forms.Button();
             this.buttonHuy = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +97,15 @@
             this.buttonHuy.UseVisualStyleBackColor = true;
             this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(325, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "(mm)";
+            // 
             // FormAddFloors
             // 
             this.AcceptButton = this.buttonDongY;
@@ -103,7 +113,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.buttonHuy;
-            this.ClientSize = new System.Drawing.Size(347, 147);
+            this.ClientSize = new System.Drawing.Size(358, 147);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonDongY);
             this.Controls.Add(this.TxtCao);
@@ -131,5 +142,6 @@
         private System.Windows.Forms.Button buttonDongY;
         private System.Windows.Forms.Button buttonHuy;
         private System.Windows.Forms.TextBox TxtThemTang;
+        private System.Windows.Forms.Label label3;
     }
 }

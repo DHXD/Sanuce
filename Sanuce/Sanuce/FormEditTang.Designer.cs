@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonHuy = new System.Windows.Forms.Button();
             this.txtNCao = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSua
@@ -94,6 +95,15 @@
             this.txtNCao.TabIndex = 0;
             this.txtNCao.TextChanged += new System.EventHandler(this.textNCao_TextChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(296, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "(mm)";
+            // 
             // FormEditTang
             // 
             this.AcceptButton = this.buttonDongY;
@@ -101,7 +111,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.buttonHuy;
-            this.ClientSize = new System.Drawing.Size(313, 140);
+            this.ClientSize = new System.Drawing.Size(328, 140);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNCao);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.label2);
@@ -131,5 +142,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonHuy;
         private System.Windows.Forms.TextBox txtNCao;
+        private System.Windows.Forms.Label label3;
     }
 }
