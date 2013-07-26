@@ -51,6 +51,7 @@ namespace Sanuce
         private void buttonDongY_Click(object sender, EventArgs e)
         {
             
+
             float u;
 
 
@@ -79,6 +80,8 @@ namespace Sanuce
 
             }
 
+            
+            
             this.Close();
             
         }

@@ -167,11 +167,11 @@
       <DependentUpon>FormEditTang.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassDuLieu.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="UserControlDockingPalette.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UserControlDockingPalette.Designer.cs">
+      <DependentUpon>UserControlDockingPalette.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -189,8 +189,8 @@
     <EmbeddedResource Include="FormEditTang.resx">
       <DependentUpon>FormEditTang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlDockingPalette.resx">
+      <DependentUpon>UserControlDockingPalette.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

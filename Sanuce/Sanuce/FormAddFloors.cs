@@ -67,9 +67,12 @@ namespace Sanuce
             for (int i = 0; i < t; i++)
             {
                 ClassTang tang = new ClassTang(t, d);
-                ParentFormFloors.ParentCommands.DuLieu.listTang.Add(tang);
+                
+                ParentFormFloors.ParentCommands.DuLieu.AddTang(tang);
 
             }
+
+            ParentFormFloors.ParentCommands.DuLieu.Call_DuLieuChange("add");
 
             this.Close();
         }

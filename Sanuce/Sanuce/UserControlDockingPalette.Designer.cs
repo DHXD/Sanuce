@@ -49,7 +49,7 @@
             this.MinimumSize = new System.Drawing.Size(130, 200);
             this.Name = "Palette";
             this.Size = new System.Drawing.Size(130, 200);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.Load += new System.EventHandler(this.UserControlDockingPalette_Load);
             this.ResumeLayout(false);
 
         }
