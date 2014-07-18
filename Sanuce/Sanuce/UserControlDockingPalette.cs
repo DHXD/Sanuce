@@ -19,10 +19,8 @@ namespace Sanuce
             InitializeComponent();
 
             ParentCommands = myCommands;
-            
         }
 
-       
         private void UserControlDockingPalette_Load(object sender, EventArgs e)
         {
             ParentCommands.DuLieu.DuLieuChangeEvent += new ClassDuLieu.DuLieu_EventHandler(DuLieu_Change);   
@@ -37,11 +35,8 @@ namespace Sanuce
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             FormFloors Floors = new FormFloors(ParentCommands);
             Floors.ShowDialog();
-            
-           
         }
 
         void CapNhatDanhSach()
@@ -57,7 +52,12 @@ namespace Sanuce
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            
+        }
+
+        private void btVeLuoiTruc_Click(object sender, EventArgs e)
+        {
+            FormGridAxis GridAxis = new FormGridAxis(ParentCommands);
+            GridAxis.ShowDialog();
         }
 
     }

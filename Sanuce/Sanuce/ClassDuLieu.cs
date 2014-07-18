@@ -10,10 +10,12 @@ namespace Sanuce
     {
         public List<ClassTang> listTang = new List<ClassTang>();
 
+        public ClassTrucNgang TrucX = new ClassTrucNgang();
+        public ClassTrucDoc TrucY = new ClassTrucDoc();
+
         public class DuLieu_EventArgs : EventArgs
         {
             public string ChangeType;
-
 
             public DuLieu_EventArgs(string changeType)
             {
@@ -52,8 +54,6 @@ namespace Sanuce
         {
             listTang.Add(tang);
 
-            
-            
         }
 
         public void Call_DuLieuChange(string changeType)        // thong bao su kien DuLieuChangeEvent
@@ -62,6 +62,5 @@ namespace Sanuce
             if (DuLieuChangeEvent != null) DuLieuChangeEvent(this, thamso);
         }
         
-
     }
 }

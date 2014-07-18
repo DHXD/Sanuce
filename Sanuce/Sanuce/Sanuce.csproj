@@ -139,7 +139,28 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDoiTuong.cs" />
+    <Compile Include="ClassTruc.cs" />
+    <Compile Include="ClassDuLieuTruc.cs" />
     <Compile Include="ClassTang.cs" />
+    <Compile Include="FormGridAxis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGridAxis.Designer.cs">
+      <DependentUpon>FormGridAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditTrucDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditTrucDoc.Designer.cs">
+      <DependentUpon>FormEditTrucDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditTrucNgang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditTrucNgang.Designer.cs">
+      <DependentUpon>FormEditTrucNgang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFloors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +196,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormGridAxis.resx">
+      <DependentUpon>FormGridAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditTrucDoc.resx">
+      <DependentUpon>FormEditTrucDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditTrucNgang.resx">
+      <DependentUpon>FormEditTrucNgang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFloors.resx">
       <DependentUpon>FormFloors.cs</DependentUpon>
     </EmbeddedResource>
