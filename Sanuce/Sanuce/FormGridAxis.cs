@@ -57,13 +57,18 @@ namespace Sanuce
             
             float.TryParse(TxtKhoangCachTrucX.Text, out ngang);
 
+<<<<<<< HEAD
             ClassTrucNgang TrucNgang = new ClassTrucNgang(ngang, demNgang);
+=======
+            ClassTrucNgang DGANgang = new ClassTrucNgang(ngang, demNgang);
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
 
             ClassDoiTuong TrucThamChieu = ParentCommandsDGA.DuLieu.TrucX;
 
             if (ParentCommandsDGA.DuLieuTruc.listTrucNgang.Count > 0) // la truc tiep theo
             {
                 TrucThamChieu = ParentCommandsDGA.DuLieuTruc.listTrucNgang[ParentCommandsDGA.DuLieuTruc.listTrucNgang.Count - 1];
+<<<<<<< HEAD
             }
 
             // gan cac thuoc tinh khoi tao de tinh toan khi ve           
@@ -72,6 +77,19 @@ namespace Sanuce
             TrucNgang.listThuocTinh.Add(kcNgang);
             ParentCommandsDGA.DuLieuTruc.AddTrucNgang(TrucNgang);
             //ParentCommandsDGA.DuLieuTruc.Call_DuLieuTrucChange("add");
+=======
+
+            }
+
+            // gan cac thuoc tinh khoi tao de tinh toan khi ve
+            DGANgang.DoiTuongThamChieu = TrucThamChieu;
+            DGANgang.listThuocTinh.Add(kcNgang);
+
+            ParentCommandsDGA.DuLieuTruc.AddTrucNgang(DGANgang);
+
+            ParentCommandsDGA.DuLieuTruc.Call_DuLieuTrucChange("add");
+
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
             CapNhatDanhSachDGA_ListBoxNgang();
         }
 
@@ -95,6 +113,7 @@ namespace Sanuce
             }
         }
 
+<<<<<<< HEAD
         private void btnSuaTrucDoc_Click(object sender, EventArgs e)
         {
             if (listBoxTrucDoc.SelectedIndices.Count > 0)
@@ -110,6 +129,8 @@ namespace Sanuce
             }
         }
 
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         private void buttonXoaTrucNgang_Click(object sender, EventArgs e)
         {
             if (listBoxTrucNgang.SelectedIndices.Count > 0)
@@ -118,6 +139,7 @@ namespace Sanuce
                 traloi = MessageBox.Show("Bạn có chắc chắn không !", "Thông báo !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (traloi == DialogResult.OK)
                 {
+<<<<<<< HEAD
                     for (int i = listBoxTrucNgang.SelectedIndices.Count-1; i >= 0; i--)
                     {
                         int j = listBoxTrucNgang.SelectedIndices[i];
@@ -146,6 +168,14 @@ namespace Sanuce
                         
                     }
                     ParentCommandsDGA.DrawGridAxis();
+=======
+                    for (int i = 0; i < listBoxTrucNgang.SelectedIndices.Count; i++)
+                    {
+                        int j = listBoxTrucNgang.SelectedIndices[i];
+
+                        ParentCommandsDGA.DuLieuTruc.listTrucNgang.RemoveAt(j - i);
+                    }
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
                 }
                 CapNhatDanhSachDGA_ListBoxNgang();
             }
@@ -158,6 +188,7 @@ namespace Sanuce
            // ParentCommandsDGA.DuLieuDGA.Call_DuLieuDGAChange("Delete");
         }
 
+<<<<<<< HEAD
         private void btnXoaTrucDoc_Click(object sender, EventArgs e)
         {
             if (listBoxTrucDoc.SelectedIndices.Count > 0)
@@ -207,6 +238,8 @@ namespace Sanuce
             //ParentCommandsDGA.DuLieuDGA.Call_DuLieuDGAChange("Delete");
         }
 
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         void CapNhatDanhSachDGA_ListBoxNgang()
         {
             listBoxTrucNgang.Items.Clear();
@@ -275,8 +308,11 @@ namespace Sanuce
 
             ClassTrucDoc DGADoc = new ClassTrucDoc(Doc, demDoc);
 
+<<<<<<< HEAD
             DGADoc.Name = Convert.ToString ( ParentCommandsDGA.DuLieuTruc.listTrucDoc.Count + 1);
 
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
             ClassDoiTuong TrucThamChieu = ParentCommandsDGA.DuLieu.TrucY;
 
             if (ParentCommandsDGA.DuLieuTruc.listTrucDoc.Count > 0) // La truc tiep theo
@@ -286,6 +322,7 @@ namespace Sanuce
 
             // gan cac thuoc tinh khoi tao de tinh toan khi ve
             DGADoc.DoiTuongThamChieu = TrucThamChieu;
+<<<<<<< HEAD
             DGADoc.Subscribe(TrucThamChieu);
             DGADoc.listThuocTinh.Add(kcDoc);         
             ParentCommandsDGA.DuLieuTruc.AddTrucDoc(DGADoc);
@@ -293,6 +330,62 @@ namespace Sanuce
             CapNhatDanhSachDGA_ListBoxDoc();
         }
 
+=======
+            DGADoc.listThuocTinh.Add(kcDoc);
+          
+            ParentCommandsDGA.DuLieuTruc.AddTrucDoc(DGADoc);
+
+            ParentCommandsDGA.DuLieuTruc.Call_DuLieuTrucChange("add");
+
+            CapNhatDanhSachDGA_ListBoxDoc();
+        }
+
+        private void btnSuaTrucDoc_Click(object sender, EventArgs e)
+        {
+            if (listBoxTrucDoc.SelectedIndices.Count > 0)
+            {
+                FormEditTrucDoc suaTrucDoc = new FormEditTrucDoc(this);
+                suaTrucDoc.ShowDialog();
+                CapNhatDanhSachDGA_ListBoxDoc();
+            }
+            else
+            {
+                DialogResult thongbao;
+                thongbao = MessageBox.Show("Chưa chọn trục cần sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            //FormEditTrucDoc suatruc = new FormEditTrucDoc(this);
+            //suatruc.ShowDialog();
+
+            //CapNhatDanhSachDGA_ListBoxDoc();
+        }
+
+        private void btnXoaTrucDoc_Click(object sender, EventArgs e)
+        {
+            if (listBoxTrucDoc.SelectedIndices.Count > 0)
+            {
+                DialogResult traloi;
+                traloi = MessageBox.Show("Bạn có chắc chắn không !", "Thông báo !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (traloi == DialogResult.OK)
+                {
+                    for (int i = 0; i < listBoxTrucDoc.SelectedIndices.Count; i++)
+                    {
+                        int j = listBoxTrucDoc.SelectedIndices[i];
+
+                        ParentCommandsDGA.DuLieuTruc.listTrucDoc.RemoveAt(j - i);
+                    }
+                }
+                CapNhatDanhSachDGA_ListBoxDoc();
+            }
+            else
+            {
+                DialogResult thongbao;
+                thongbao = MessageBox.Show("Ban chưa chọn trục cần xóa !", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            //ParentCommandsDGA.DuLieuDGA.Call_DuLieuDGAChange("Delete");
+        }
+
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         private void FormDrawGridAxis_Load(object sender, EventArgs e)
         {
             CapNhatDanhSachDGA_ListBoxDoc();

@@ -6,10 +6,17 @@ using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.EditorInput;
+<<<<<<< HEAD
 using DBTransMan = Autodesk.AutoCAD.DatabaseServices.TransactionManager;
 using System.Linq;
 using System.Text;
 using System.Reflection;
+=======
+using System.Collections.Generic;
+using DBTransMan = Autodesk.AutoCAD.DatabaseServices.TransactionManager;
+using System.Linq;
+using System.Text;
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
 
 
 namespace Sanuce
@@ -18,8 +25,12 @@ namespace Sanuce
     public class ClassTrucNgang: ClassDoiTuong
     {
         public int soTrucNgang;
+<<<<<<< HEAD
         public float doDai = 1000;
         public float ToaDoDiemDau = 0;
+=======
+
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         public ObjectId idTruc;
         private bool hasDrawObject = false;
         
@@ -27,13 +38,17 @@ namespace Sanuce
 
         private Point3d ptStart;
         private Point3d ptEnd;
+<<<<<<< HEAD
         private Matrix3d transformMatrix;
         public Vector3d hieuKC;
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
 
         public ClassTrucNgang()
         {
            
         }
+<<<<<<< HEAD
 
         public void XuLySuKien_ViTriChange(ClassDoiTuong doiTuongThayDoi)
         {
@@ -50,12 +65,16 @@ namespace Sanuce
             doiTuongBiTheoDoi.ViTri_Change += new ViTri_ChangeHandler(XuLySuKien_ViTriChange);
         }
 
+=======
+        
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         public ClassTrucNgang(float kctrucngang, int trucngang)
         {
             soTrucNgang = trucngang;
             khoangCachTrucNgang = kctrucngang;
         }
 
+<<<<<<< HEAD
        
 
         public void tinhToan()
@@ -75,15 +94,45 @@ namespace Sanuce
 
         public void Ve()            //Ve truc ngang len CAD
         {   
+=======
+        public void tinhToan(float x, float ToaDoDiemDau)
+        {
+            khoangCachTrucNgang = (float)this.listThuocTinh[0];
+            ClassTrucNgang TrucThamChieu = (ClassTrucNgang)this.DoiTuongThamChieu;
+
+            Pos = new Point3d(TrucThamChieu.Pos.X, TrucThamChieu.Pos.Y + khoangCachTrucNgang, 0);
+
+
+            ptStart = new Point3d(Pos.X + ToaDoDiemDau, Pos.Y, Pos.Z);
+            ptEnd = new Point3d(Pos.X + x + ToaDoDiemDau, Pos.Y, Pos.Z);
+        }
+
+        public void Ve()
+        {   
+            //Ve truc ngang len CAD
+            //ClassTrucNgang TrucNgang = DuLieuDGA.listDGANgang[i];
+           
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
             // Get the current database and start the Transaction Manager
             Document acDoc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
             Database acCurDb = acDoc.Database;
 
+<<<<<<< HEAD
             // Start a transaction
             using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
             {
                 if (!hasDrawObject) // chua ve thi ve
                 {
+=======
+           
+            // Start a transaction
+            using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+            {
+
+                if (!hasDrawObject) // chua ve thi ve
+                {
+
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
                     BlockTable acBlkTbl;
                     BlockTableRecord acBlkTblRec;
 
@@ -99,6 +148,7 @@ namespace Sanuce
                     // Add the line to the drawing
                     idTruc = acBlkTblRec.AppendEntity(acLine);
                     acTrans.AddNewlyCreatedDBObject(acLine, true);
+<<<<<<< HEAD
                     hasDrawObject = true;                
                 }
                 else   // ve roi thi sua vi tri, do dai, xoa
@@ -140,10 +190,46 @@ namespace Sanuce
                         ta.Dispose();
                     }
                 }             
+=======
+                    hasDrawObject = true;
+
+                   
+                }
+                else   // ve roi thi sua vi tri
+                {
+                    if (this.flag == true)
+                    {
+                        Database db = Application.DocumentManager.MdiActiveDocument.Database;
+                        DBTransMan tm = db.TransactionManager;
+                        //start a transaction
+                        Transaction ta = tm.StartTransaction();
+                        try
+                        {
+                            Entity ent = (Entity)tm.GetObject(this.idTruc, OpenMode.ForWrite, true);
+                            ent.ColorIndex = 1;
+
+                            ta.Commit();
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Loi sua khoang cach");
+                        }
+                        finally
+                        {
+                            ta.Dispose();
+                        }
+                    }
+                }
+              
+
+                // Zoom to the extents or limits of the drawing
+                //acDoc.SendStringToExecute("._zoom _all ", true, false, false);
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
 
                 // Commit the changes and dispose of the transaction
                 acTrans.Commit();
             }
+<<<<<<< HEAD
         }    
 
         public void xoa()
@@ -172,11 +258,22 @@ namespace Sanuce
                 tr.Commit();
             }
             db.ReclaimMemoryFromErasedObjects(erased);
+=======
+        }
+
+        internal void tinhToan()
+        {
+            throw new NotImplementedException();
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         }
     }
 
     public class ClassTrucDoc: ClassDoiTuong
+<<<<<<< HEAD
     {        
+=======
+    {
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         public int soTrucDoc;
         public ObjectId idTruc;
         private bool hasDrawObject = false;
@@ -184,10 +281,13 @@ namespace Sanuce
 
         private Point3d ptStart;
         private Point3d ptEnd;
+<<<<<<< HEAD
         private Matrix3d transformMatrix;
 
         public float doDai = 1000;
         public float ToaDoDiemDau = 0;
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         
         public ClassTrucDoc() { }
 
@@ -197,6 +297,7 @@ namespace Sanuce
             khoangCachTrucDoc = kctrucdoc;
         }
 
+<<<<<<< HEAD
         public void XuLySuKien_ViTriChange(ClassDoiTuong doiTuongThayDoi)
         {
             // xu ly
@@ -224,6 +325,17 @@ namespace Sanuce
             ptStart = new Point3d(Pos.X, Pos.Y + ToaDoDiemDau, Pos.Z);
             ptEnd = new Point3d(Pos.X, Pos.Y + doDai + ToaDoDiemDau, Pos.Z);
           
+=======
+        public void TinhToan(float y, float ToaDoDiemDau)
+        {
+            khoangCachTrucDoc = (float)this.listThuocTinh[0];
+            ClassTrucDoc TrucThamChieu = (ClassTrucDoc)this.DoiTuongThamChieu;
+
+            Pos = new Point3d(TrucThamChieu.Pos.X + khoangCachTrucDoc, TrucThamChieu.Pos.Y, 0);
+
+            ptStart = new Point3d(Pos.X, Pos.Y + ToaDoDiemDau, Pos.Z);
+            ptEnd = new Point3d(Pos.X, Pos.Y + y + ToaDoDiemDau, Pos.Z);
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         }
 
         public void Ve()
@@ -232,6 +344,7 @@ namespace Sanuce
               Database acCurDb = acDoc.Database;
 
               using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
+<<<<<<< HEAD
               {
                 if (!hasDrawObject) // Chua ve thi ve
                 {
@@ -321,6 +434,61 @@ namespace Sanuce
                 tr.Commit();
             }
             db.ReclaimMemoryFromErasedObjects(erased);
+=======
+                {
+                    if (!hasDrawObject) // Chua ve thi ve
+                    {
+                        BlockTable acBlkTbl;
+                        BlockTableRecord acBlkTblRec;
+
+                        // Open Model space for write
+                        acBlkTbl = acTrans.GetObject(acCurDb.BlockTableId, OpenMode.ForRead) as BlockTable;
+                        acDoc.LockDocument();
+                        acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.ModelSpace], OpenMode.ForWrite) as BlockTableRecord;
+
+                        // Define the new line
+                        Line acLine = new Line(ptStart, ptEnd);
+                        acLine.SetDatabaseDefaults();
+
+                        // Add the line to the drawing
+                        idTruc = acBlkTblRec.AppendEntity(acLine);
+                        acTrans.AddNewlyCreatedDBObject(acLine, true);
+                        hasDrawObject = true;
+                    }
+                    else // Ve roi thi sua vi tri
+                    {
+                        if (this.flag == true)
+                        {
+                            Database db = Application.DocumentManager.MdiActiveDocument.Database;
+                            DBTransMan tm = db.TransactionManager;
+                            //start a transaction
+                            Transaction ta = tm.StartTransaction();
+                            try
+                            {
+                                Entity ent = (Entity)tm.GetObject(this.idTruc, OpenMode.ForWrite, true);
+                                ent.ColorIndex = 1;
+                               // ent
+                                ta.Commit();
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Loi sua khoang cach");
+                            }
+                            finally
+                            {
+                                ta.Dispose();
+                            }
+                        }
+                    }
+
+
+                    // Zoom to the extents or limits of the drawing
+                   // acDoc.SendStringToExecute("._zoom _all ", true, false, false);
+
+                    // Commit the changes and dispose of the transaction
+                    acTrans.Commit();
+                }
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         }
     }
 }

@@ -57,11 +57,14 @@ namespace Sanuce
             float ToaDoDiemDauTheoX, ToaDoDiemDauTheoY;
             float doDaiTheoTrucX = 0, doDaiTheoTrucY = 0;
 
+<<<<<<< HEAD
             if (DuLieuTruc.listTrucDoc.Count <= 0)
             {               
                 return; //
             }
 
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
             ClassTrucDoc TrucDoc = DuLieuTruc.listTrucDoc[0];
             ToaDoDiemDauTheoX = TrucDoc.khoangCachTrucDoc;
 
@@ -94,11 +97,18 @@ namespace Sanuce
                 {
                     ClassTrucDoc DGADoc = DuLieuTruc.listTrucDoc[0];
                 }
+<<<<<<< HEAD
                 TrucNgang1.ToaDoDiemDau = ToaDoDiemDauTheoX ;
                 TrucNgang1.doDai = doDaiTheoTrucY;
                 TrucNgang1.tinhToan();
                 TrucNgang1.Ve();
             }
+=======
+
+                TrucNgang1.tinhToan(doDaiTheoTrucY,ToaDoDiemDauTheoX);
+                TrucNgang1.Ve();
+       }
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
 
             //Ve truc doc len CAD
             for (int i = 0; i < DuLieuTruc.listTrucDoc.Count; i++)
@@ -114,9 +124,13 @@ namespace Sanuce
                     ClassTrucNgang DGANgang=DuLieuTruc.listTrucNgang[0];
                 }
 
+<<<<<<< HEAD
                 TrucDoc1.doDai = doDaiTheoTrucX;
                 TrucDoc1.ToaDoDiemDau = ToaDoDiemDauTheoY;
                 TrucDoc1.TinhToan();
+=======
+                TrucDoc1.TinhToan(doDaiTheoTrucX,ToaDoDiemDauTheoY);
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
                 TrucDoc1.Ve();
             }
         }

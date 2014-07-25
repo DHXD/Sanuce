@@ -143,7 +143,12 @@
         private System.Windows.Forms.Button buttonHuy;
         private System.Windows.Forms.TextBox txtNCao;
         private System.Windows.Forms.Label label3;
+<<<<<<< HEAD
         //private System.EventHandler txtSua_TextChanged;
         //private System.EventHandler textNCao_TextChanged;
+=======
+        private System.EventHandler txtSua_TextChanged;
+        private System.EventHandler textNCao_TextChanged;
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
     }
 }

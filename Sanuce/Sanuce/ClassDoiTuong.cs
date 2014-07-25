@@ -12,6 +12,7 @@ namespace Sanuce
         public  List<Object> listThuocTinh = new List<Object>();
         public bool flag = false;
         public Point3d Pos = new Point3d(0, 0, 0);
+<<<<<<< HEAD
 
         public String Name = "";
 
@@ -34,5 +35,7 @@ namespace Sanuce
         //}
 
         
+=======
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
     }
 }

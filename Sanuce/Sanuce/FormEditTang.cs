@@ -27,7 +27,12 @@ namespace Sanuce
             for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
             {
                 txtSua.Text += (i > 0 ? ", " : "") + (ParentSuaTang.listBox1.SelectedIndices[i] + 1);
+<<<<<<< HEAD
             }    
+=======
+            }
+      
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
         }
 
         private void textSua_TextChanged(object sender, EventArgs e)

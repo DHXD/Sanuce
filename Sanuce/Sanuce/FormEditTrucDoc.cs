@@ -71,6 +71,7 @@ namespace Sanuce
 
             for (int i = 0; i < ParentSuaTrucDoc.listBoxTrucDoc.SelectedIndices.Count; i++)
             {
+<<<<<<< HEAD
                 ClassTrucDoc TrucDoc = ParentSuaTrucDoc.ParentCommandsDGA.DuLieuTruc.listTrucDoc[ParentSuaTrucDoc.listBoxTrucDoc.SelectedIndices[i]];
                 TrucDoc.khoangCachTrucDoc = khoangcachsua;
                 TrucDoc.listThuocTinh[0] = khoangcachsua;
@@ -81,6 +82,16 @@ namespace Sanuce
            }
 
             //ParentSuaTrucDoc.ParentCommandsDGA.DuLieuTruc.Call_DuLieuTrucChange("Edit");
+=======
+                ClassTrucDoc DGADoc = ParentSuaTrucDoc.ParentCommandsDGA.DuLieuTruc.listTrucDoc[ParentSuaTrucDoc.listBoxTrucDoc.SelectedIndices[i]];
+                DGADoc.khoangCachTrucDoc = khoangcachsua;
+                DGADoc.listThuocTinh[0] = khoangcachsua;
+                DGADoc.flag = true;
+            }
+
+            //ParentSuaTrucDoc.ParentCommandsDGA.DuLieuTruc.Call_DuLieuTrucChange("Edit");
+
+>>>>>>> a4ba73e0b897cbddee7b2620c4f09ce53b65bfb5
             this.Close();
         }
     }
