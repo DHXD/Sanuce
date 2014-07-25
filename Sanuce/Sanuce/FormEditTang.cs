@@ -21,24 +21,21 @@ namespace Sanuce
             ParentSuaTang = formFloors;
         }
 
-
-
         private void Sửa_Tâng_Load(object sender, EventArgs e)
         {
             txtSua.Text = "";
             for (int i = 0; i < ParentSuaTang.listBox1.SelectedIndices.Count; i++)
             {
                 txtSua.Text += (i > 0 ? ", " : "") + (ParentSuaTang.listBox1.SelectedIndices[i] + 1);
-            }
-            
+            }    
         }
 
-        private void txtSua_TextChanged(object sender, EventArgs e)
+        private void textSua_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textNCao_TextChanged(object sender, EventArgs e)
+        private void txtNCao_TextChanged(object sender, EventArgs e)
         {
            
         }
@@ -50,21 +47,16 @@ namespace Sanuce
 
         private void buttonDongY_Click(object sender, EventArgs e)
         {
-            
-
             float u;
-
-
             // Kiem tra nhap ....
             float.TryParse(txtNCao.Text, out  u);
             
             if(u < 1 ) 
             {
                 DialogResult thongBao;
-                thongBao = MessageBox.Show("Chưa nhập Số tầng cần thêm ! ","Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                thongBao = MessageBox.Show("Chưa nhập Số tầng cần sửa ! ","Thông báo: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
 
             int tangcansua;
             float chieucaosua;

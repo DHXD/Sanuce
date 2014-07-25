@@ -14,7 +14,6 @@ namespace Sanuce
         {
             soTang = tang;
             chieuCao = cao;
-
         }
 
         public ClassTang()

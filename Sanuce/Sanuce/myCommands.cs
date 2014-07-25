@@ -21,7 +21,6 @@ namespace Sanuce
     // is implicitly per-document!
     public class MyCommands
     {
-
         // The CommandMethod attribute can be applied to any public  member 
         // function of any public class.
         // The function should take no arguments and return nothing.
@@ -34,9 +33,10 @@ namespace Sanuce
 
         public ClassDuLieu DuLieu = new ClassDuLieu();
 
-        
+        public ClassDuLieuTruc DuLieuTruc = new ClassDuLieuTruc();
 
         // Modal Command with localized name
+        
         [CommandMethod("MyGroup", "MyCommand", "MyCommandLocal", CommandFlags.Modal)]
         
         [CommandMethod("XD")]
@@ -49,9 +49,77 @@ namespace Sanuce
             Palette myPalette = new Palette(this);
             ps.Add("Sanuce", myPalette);
             ps.Visible = true;
-            
         }
 
+        [CommandMethod("DrawGridAxis")]
+        public void DrawGridAxis()
+        {
+            float ToaDoDiemDauTheoX, ToaDoDiemDauTheoY;
+            float doDaiTheoTrucX = 0, doDaiTheoTrucY = 0;
+
+            if (DuLieuTruc.listTrucDoc.Count <= 0)
+            {               
+                return; //
+            }
+
+            ClassTrucDoc TrucDoc = DuLieuTruc.listTrucDoc[0];
+            ToaDoDiemDauTheoX = TrucDoc.khoangCachTrucDoc;
+
+            ClassTrucNgang TrucNgang = DuLieuTruc.listTrucNgang[0];
+            ToaDoDiemDauTheoY = TrucNgang.khoangCachTrucNgang;
+
+            //Xac dinh do dai cac truc theo truc X va Y
+            for (int i = 1; i < DuLieuTruc.listTrucNgang.Count; i++)
+            {
+                ClassTrucNgang DGANgang = DuLieuTruc.listTrucNgang[i];
+                doDaiTheoTrucX += DGANgang.khoangCachTrucNgang;
+            }
+
+            for (int i = 1; i < DuLieuTruc.listTrucDoc.Count; i++)
+            {
+                ClassTrucDoc DGADoc = DuLieuTruc.listTrucDoc[i];
+                doDaiTheoTrucY += DGADoc.khoangCachTrucDoc;
+            }
+            
+            //Ve truc ngang len CAD
+            for (int i = 0; i < DuLieuTruc.listTrucNgang.Count; i++)
+            {
+                ClassTrucNgang TrucNgang1 = DuLieuTruc.listTrucNgang[i];
+
+                // Get the current database and start the Transaction Manager
+                Document acDoc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+                Database acCurDb = acDoc.Database;
+
+                if (DuLieuTruc.listTrucDoc.Count > 0)
+                {
+                    ClassTrucDoc DGADoc = DuLieuTruc.listTrucDoc[0];
+                }
+                TrucNgang1.ToaDoDiemDau = ToaDoDiemDauTheoX ;
+                TrucNgang1.doDai = doDaiTheoTrucY;
+                TrucNgang1.tinhToan();
+                TrucNgang1.Ve();
+            }
+
+            //Ve truc doc len CAD
+            for (int i = 0; i < DuLieuTruc.listTrucDoc.Count; i++)
+            {
+                ClassTrucDoc TrucDoc1 = DuLieuTruc.listTrucDoc[i];
+         
+                // Get the current database and start the Transaction Manager
+                Document acDoc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+                Database acCurDb = acDoc.Database;
+
+                if(DuLieuTruc.listTrucNgang.Count>0)
+                {
+                    ClassTrucNgang DGANgang=DuLieuTruc.listTrucNgang[0];
+                }
+
+                TrucDoc1.doDai = doDaiTheoTrucX;
+                TrucDoc1.ToaDoDiemDau = ToaDoDiemDauTheoY;
+                TrucDoc1.TinhToan();
+                TrucDoc1.Ve();
+            }
+        }
 
         // Modal Command with pickfirst selection
         [CommandMethod("MyGroup", "MyPickFirst", "MyPickFirstLocal", CommandFlags.Modal | CommandFlags.UsePickSet)]

@@ -11,9 +11,6 @@ namespace Sanuce
 {
     public partial class FormFloors : Form
     {
-
-
-      
         public MyCommands ParentCommands;
 
         public FormFloors(MyCommands myCommands)
@@ -27,7 +24,6 @@ namespace Sanuce
         {
             FormAddFloors MoreFloor = new FormAddFloors(this);
             MoreFloor.ShowDialog();
-
             CapNhatDanhSach();
         }
 
@@ -39,18 +35,18 @@ namespace Sanuce
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool bItemSelected = (listBox1.SelectedIndices.Count > 0);
             
+            bool bItemSelected = (listBox1.SelectedIndices.Count > 0);
             btnEdit.Enabled = bItemSelected;
             btnDelete.Enabled = bItemSelected;
-            
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormEditTang suatang = new FormEditTang(this);
             suatang.ShowDialog();
-
+            listBox1.SelectedIndices.Clear();
             CapNhatDanhSach();
         }
 
@@ -87,6 +83,8 @@ namespace Sanuce
                 }
             }
 
+            listBox1.SelectedIndices.Clear();
+
             CapNhatDanhSach();
 
             ParentCommands.DuLieu.Call_DuLieuChange("Delete");
@@ -98,40 +96,7 @@ namespace Sanuce
             this.Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Tầng_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void hienthicotcaodo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }

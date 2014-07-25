@@ -46,7 +46,7 @@
             this.txtSua.Size = new System.Drawing.Size(151, 20);
             this.txtSua.TabIndex = 0;
             this.txtSua.TabStop = false;
-            this.txtSua.TextChanged += new System.EventHandler(this.txtSua_TextChanged);
+            this.txtSua.TextChanged += new System.EventHandler(this.textSua_TextChanged);
             // 
             // buttonDongY
             // 
@@ -93,7 +93,7 @@
             this.txtNCao.Name = "txtNCao";
             this.txtNCao.Size = new System.Drawing.Size(151, 20);
             this.txtNCao.TabIndex = 0;
-            this.txtNCao.TextChanged += new System.EventHandler(this.textNCao_TextChanged);
+            this.txtNCao.TextChanged += new System.EventHandler(this.txtNCao_TextChanged);
             // 
             // label3
             // 
@@ -143,5 +143,7 @@
         private System.Windows.Forms.Button buttonHuy;
         private System.Windows.Forms.TextBox txtNCao;
         private System.Windows.Forms.Label label3;
+        //private System.EventHandler txtSua_TextChanged;
+        //private System.EventHandler textNCao_TextChanged;
     }
 }
